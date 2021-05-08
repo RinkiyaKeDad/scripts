@@ -26,7 +26,7 @@ kube::golang::verify_go_version
 export GO111MODULE=on
 
 # install depstat
-go install github.com/kubernetes-sigs/depstat
+go get github.com/kubernetes-sigs/depstat
 
 function write_report() { depstat stats --json }
 function diff_reports() { diff $1 $2 }
